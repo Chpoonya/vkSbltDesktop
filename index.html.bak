@@ -136,9 +136,9 @@
         vkBridge.send('VKWebAppShowNativeAds',{ad_format:"reward"}).then(data => {
           console.log(data);
           unityI.SendMessage('VKSDK', 'RewardGetting',JSON.stringify(data.result));})
-      }
+      },
 	  
-	  funcion PostOnWall(){
+	  function PostOnWall(){
 		vkBridge.send("VKWebAppCallAPIMethod", {"method": "wall.post", "message": "Я прошел N уровень в игре! Присоединяйся!"});
 	  }
     </script>
