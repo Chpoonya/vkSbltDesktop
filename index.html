@@ -130,7 +130,9 @@
       }
 	  
 	  function PostOnWall(){
-		vkBridge.send("VKWebAppCallAPIMethod", {"method": "wall.post", "message": "Я прошел N уровень в игре! Присоединяйся!"});
+		vkBridge.send("VKWebAppCallAPIMethod", {"method": "wall.post", "params": {
+		"message": "aaaaaaaaa"
+		}});
 	  }
     </script>
   
