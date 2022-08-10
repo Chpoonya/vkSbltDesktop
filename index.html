@@ -129,11 +129,8 @@
           unityI.SendMessage('VKSDK', 'RewardGetting',JSON.stringify(data.result));})
       }
 	  
-	  function PostOnWall(){
-		vkBridge.send("VKWebAppCallAPIMethod", {"method": "wall.post", "params": {
-		"v": "5.107",
-		"message": "aaaaaaaaa"
-		}});
+	  function PostOnWall(message){
+		vkBridge.send("VKWebAppShowWallPostBox", { "message": message });
 	  }
     </script>
   
