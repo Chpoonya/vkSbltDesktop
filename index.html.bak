@@ -138,18 +138,9 @@
           unityI.SendMessage('VKSDK', 'RewardGetting',JSON.stringify(data.result));})
       }
 	  
-	  function CallVkApiMethod(method, params){
-		vkBridge.send("VKWebAppCallAPIMethod", {"method": method, "params": {
-		params
-		}
-		});
+	  function PostOnWall(message, attachment){
+		vkBridge.send("VKWebAppShowWallPostBox", { "message": message, "attachment": attachment });
 	  }
-	  
-	  function GetAuthToken(){
-        vkBridge.send("VKWebAppGetAuthToken",{"app_id": "51394922", "scope": "wall"]}).then(data =>{
-        console.log(data);
-        unityI.SendMessage('VKSDK', 'RecieveAuthToken', JSON.stringify(data));
-      });}
     </script>
   
   </body>
