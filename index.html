@@ -107,7 +107,7 @@
       }
 
       function getUserData(){
-        vkBridge.send("VKWebAppStorageGet",{"keys":["_save"]}).then(data =>{
+        vkBridge.send("VKWebAppGetLaunchParams").then(data =>{
         console.log(data);
         unityI.SendMessage('VKSDK', 'DataGetting', JSON.stringify(data));
       });}
